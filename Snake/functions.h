@@ -1,4 +1,3 @@
-
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
@@ -55,11 +54,15 @@ public:
     int getXHead() { return xHead; }
     int getYHead() { return yHead; }
     int getTailLen() { return tailLen; }
+    int getXTail(int index) { return xTail[index]; }
+    int getYTail(int index) { return yTail[index]; }
 
     // setters
     void setXHead(int x) { xHead = x; }
     void setYHead(int y) { yHead = y; }
     void setTailLen(int len) { tailLen = len; }
+    void setXTail(int value, int index) { xTail[index] = value; }
+    void setYTail(int value, int index) { yTail[index] = value; }
 
 private:
     int xHead, yHead, tailLen;

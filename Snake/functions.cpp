@@ -6,12 +6,14 @@
 
 using namespace std;
 
+// temporary global to get something working
 int x, y, fruitX, fruitY, score;
 int tailX[100], tailY[100]; 
 int tailLen;
 
 eDirection direction;
 
+// will be deleted soon in favor of Snake and Fruit class
 void setUp()
 {
     direction = STOP;
