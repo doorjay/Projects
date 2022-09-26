@@ -10,11 +10,13 @@ int main()
 {
     setUp();
 
+    bool gameOver = false;
+
     while (!gameOver)
     {
         draw();
-        input();
-        logic();
+        input(gameOver);
+        logic(gameOver);
 
         Sleep(50);
     }

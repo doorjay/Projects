@@ -6,11 +6,6 @@
 
 using namespace std;
 
-bool gameOver = false;
-
-const int mapWidth = 20;
-const int mapHeight = 20;
-
 int x, y, fruitX, fruitY, score;
 int tailX[100], tailY[100]; 
 int tailLen;
@@ -19,8 +14,6 @@ eDirection direction;
 
 void setUp()
 {
-    gameOver = false;
-
     direction = STOP;
 
     x = mapWidth / 2;
@@ -91,7 +84,7 @@ void draw()
     cout << "\nScore: " << score;
 }
 
-void input()
+void input(bool& gameOver)
 {
     if (_kbhit())
     {
@@ -106,7 +99,7 @@ void input()
     }
 }
 
-void logic()
+void logic(bool& gameOver)
 {
 
     int prevX = tailX[0];
